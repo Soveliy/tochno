@@ -10,7 +10,7 @@ $resolution: 1041;
   }
 
 @mixin for-lg {
-    @media (max-width: 1200px) { @content; }
+    @media (min-width: 1500px) { @content; }
   }
   @mixin for-lit-desktop {
     @media (max-width: 1050px) { @content; }
