@@ -11,6 +11,7 @@ body{
     font-size: vw(16);
     line-height: vw(24);
     color: $main-color;
+
     @include for-md(){
         font-size: 15px;
         line-height: 22px;
@@ -26,6 +27,10 @@ body{
     &--big{
         max-width: vw(1732);
         padding-right: vw(55);
+    }
+    &--medium{
+       padding-right: 0;
+    //    margin-right: - vw(200);
     }
     &--relative{
         position: relative;
@@ -135,7 +140,7 @@ p+p{
     margin-top: vw(125);
     background-color: $link-color;
     color: $footer-color;
-    padding: vw(75) 0 vw(60);
+    padding: vw(65) 0 vw(60);
     &__link{
         font-size: vw(40);
         line-height: vw(52);
@@ -149,6 +154,7 @@ p+p{
         }
         span:not(.footer__link-arrow){
             font-family: 'Arial';
+            font-weight: 500;
         }
     }
     &__copy{
@@ -192,11 +198,18 @@ p+p{
         margin-top: vw(75);
         height: vw(3);
         background-color: $link-color;
+       width: 65%;
+        transition: .3s;
+
+        transition-property:opacity,transform,width !important;
+        &.aos-animate{
+           width: 100%;
+        }
     }
     &__list{
         display: flex;
         flex-wrap: wrap;
-        margin-right: - vw(40);
+        margin-right: - vw(200);
     }
     &__list-item{
         position: relative;

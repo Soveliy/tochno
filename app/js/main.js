@@ -14,3 +14,5 @@ var swiper = new Swiper(".hero__slider .swiper-container", {
   //   clickable: true,
   // },
 });
+
+AOS.init();
