@@ -29,7 +29,12 @@ body{
     margin: 0 auto;
     box-sizing: border-box;
     @include for-xl(){
-        max-width: 2070px;
+        max-width: 2140px;
+        padding-right: 0;
+    }
+    @include for-md(){
+        max-width: 96%;
+        padding: 0;
     }
     &--big{
         max-width: vw(1732);
@@ -37,6 +42,10 @@ body{
         @include for-xl(){
             max-width: 2400px;
             padding-right: 0;
+        }
+        @include for-md(){
+            max-width: 96%;
+            padding: 0;
         }
     }
     &--medium{
@@ -56,6 +65,9 @@ body{
         @include for-xl(){
             padding-top: 105px;
         }
+        @include for-md(){
+            padding-top: 30px;
+        }
     }
     &__logo{
         height: vw(18);
@@ -69,9 +81,17 @@ body{
             width: 318px;
             top:115.5px;
         }
+        @include for-md(){
+            height: 18px;
+            width: 91px;
+            top: 34px;
+        }
         svg{
             max-width: 100%;
             max-height: vw(18);
+            @include for-md(){
+                max-height: 18px;
+            }
         }
         // @include for-xl(){}
         
@@ -98,6 +118,9 @@ body{
         @include for-xl(){
             margin-right: 14px;
         }
+        @include for-md(){
+            margin-right: 4px;
+        }
 
     }
 }
@@ -105,6 +128,9 @@ body{
     padding-top: vw(75);
     @include for-xl(){
         padding-top: 262px;
+    }
+    @include for-md(){
+        padding-top: 50px;
     }
     &__row{
         margin-top: vw(60);
@@ -114,6 +140,9 @@ body{
         @include for-xl(){
             margin-top: 210px;
         }
+        @include for-md(){
+            margin-top: 60px;
+        }
     }
     &__slider{
         position: relative;
@@ -122,11 +151,17 @@ body{
         @include for-xl(){
             margin: 0 70px;
         }
+        @include for-md(){
+            margin: 0 20;
+        }
     }
     &__svg-container{
         height: vw(42);
         @include for-xl(){
             height: 172px;
+        }
+        @include for-md(){
+            height: 42px;
         }
         flex-shrink: 0;
         svg{
@@ -134,6 +169,9 @@ body{
             max-width: 100%;
             @include for-xl(){
                 height: 172px;
+            }
+            @include for-md(){
+                height: 42px;
             }
         }
     }
@@ -145,6 +183,14 @@ body{
     p{
         font-size: vw(20);
         line-height: vw(34);
+        @include for-xl(){
+            font-size: 70px;
+            line-height: 102px;
+        }
+        @include for-md(){
+            font-size: 20px;
+            line-height: 34px;
+        }
     }
 }
 .title{
@@ -156,17 +202,30 @@ body{
         font-size: 140px;
         line-height: 182px;
     }
+    @include for-md(){
+        font-size: 30px;
+        line-height: 34px;
+        br{
+            display: none;
+        }
+    }
 }
 .title+.subtitle{
     margin-top: vw(40);
     @include for-xl(){
         margin-top: 140px;
     }
+    @include for-md(){
+        margin-top: 40px;
+    }
 }
 .subtitle + p{
     margin-top: vw(20);
     @include for-xl(){
         margin-top: 70px;
+    }
+    @include for-md(){
+        margin-top: 20px;
     }
 }
 .subtitle{
@@ -177,6 +236,10 @@ body{
         font-size: 70px;
         line-height: 112px;
     }
+    @include for-md(){
+        font-size: 20px;
+        line-height: 32px;
+    }
 }
 p{
     font-weight: 500;
@@ -186,17 +249,26 @@ p + .subtitle{
     @include for-xl(){
         margin-top: 210px;
     }
+    @include for-md(){
+        margin-top: 60px;
+    }
 }
 .title + p{
     margin-top: vw(24);
     @include for-xl(){
         margin-top: 84px;
     }
+    @include for-md(){
+        margin-top: 24px;
+    }
 }
 p+p{
     margin-top: vw(28);
     @include for-xl(){
         margin-top: 98px;
+    }
+    @include for-md(){
+        margin-top: 28px;
     }
 }
 .footer{
@@ -207,6 +279,10 @@ p+p{
     @include for-xl(){
         margin-top: 430px;
         padding: 227px 0 210px;
+    }
+    @include for-md(){
+        margin-top: 40px;
+        padding: 30px 0;
     }
     &__link{
         font-size: vw(40);
@@ -220,6 +296,10 @@ p+p{
             font-size: 140px;
             line-height: 182px;
             padding-bottom: 17.5px;
+        }
+        @include for-md(){
+            font-size: 20px;
+            line-height: 28px;
         }
         &:hover{
             color: rgb(238, 238, 238) !important;
@@ -240,6 +320,10 @@ p+p{
             line-height: 80px;
             margin-top: 175px;
         }
+        @include for-md(){
+            font-size: 20px;
+            line-height: 23px;
+        }
         
     }
 }
@@ -247,13 +331,31 @@ p+p{
     position: relative;
     overflow: hidden;
     margin-top: vw(130);
+    @include for-xl(){
+        margin-top: 455px;
+}
+@include for-md(){
+    margin-top: 50px;
+}
     img{
         position: absolute;
-        left: 100%;
+        left: 80%;
         height: vw(450);
         width: vw(450);
         border-radius: 50%;
         top: vw(350);
+        @include for-xl(){
+            top: 525px;
+            height: 1100px;
+            width: 1100px;
+        }
+        @include for-md(){
+            position: static;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            margin-top: 30px
+        }
     }
 }
 .increase{
@@ -263,16 +365,27 @@ p+p{
     @include for-xl(){
         margin-top: 455px;
 }
+@include for-md(){
+    margin-top: 50px;
+}
     img{
         position: absolute;
-        left: 100%;
+        left: 80%;
         height: vw(450);
         width: vw(450);
         border-radius: 50%;
         top: vw(150);
         @include for-xl(){
+            top: 525px;
             height: 1100px;
             width: 1100px;
+        }
+        @include for-md(){
+            position: static;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            margin-top: 30px
         }
 
     }
@@ -283,6 +396,9 @@ p+p{
     overflow: hidden;
     @include for-xl(){
             margin-top: 455px;
+    }
+    @include for-md(){
+        margin-top: 50px;
     }
     &__line{
         margin-top: vw(75);
@@ -298,12 +414,20 @@ p+p{
         }
         @include for-xl(){
             margin-top: 262px;
+            height: 10.5px;
+        }
+        @include for-md(){
+            margin-top: 50px;
+            height: 3px;
         }
     }
     &__list{
         display: flex;
         flex-wrap: wrap;
         margin-right: - vw(200);
+        @include for-md(){
+            margin-right: -20px;
+        }
         // @include for-xl(){
         //     margin-right: -700px;
         // }
@@ -314,6 +438,13 @@ p+p{
         box-sizing: border-box;
         width: 33.3%;
         padding-top: vw(36);
+        @include for-xl(){
+            padding-top: 126px;
+        }
+        @include for-md(){
+            padding-top: 36px;
+            padding-right: 20px;
+        }
         &::before{
             content: '';
             position: absolute;
@@ -328,6 +459,11 @@ p+p{
 
                 height: 42px;
                 width: 42px;
+            }
+            @include for-md(){
+                height: 12px;
+                width: 12px;
+                top: -7px;
             }
         }
        
