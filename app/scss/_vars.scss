@@ -2,8 +2,12 @@ $main-color:#000;
 $link-color:rgba(0, 102, 255, 1);
 $footer-color:#fff;
 $resolution: 1041;
+$resolution2: 320;
 @function vw($px) {
   @return (($px/$resolution) * 100)  + vw;
+}
+@function vw2($px) {
+  @return (($px/$resolution2) * 100)  + vw;
 }
 @mixin for-xl {
     @media (min-width: 3100px) { @content; }

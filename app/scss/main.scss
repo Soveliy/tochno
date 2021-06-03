@@ -17,8 +17,8 @@ body{
     }
 
     @include for-md(){
-        font-size: 16px;
-        line-height: 24px;
+        font-size: vw2(16);
+        line-height: vw2(28);
        
     }
 }
@@ -36,8 +36,8 @@ body{
         padding-right: 0;
     }
     @include for-md(){
-        max-width: 96%;
-        padding: 0;
+        max-width: 100%;
+        padding: 0 4.8625vw;
     }
     &--big{
         max-width: vw(1732);
@@ -50,8 +50,8 @@ body{
             padding-right: 0;
         }
         @include for-md(){
-            max-width: 96%;
-            padding: 0;
+            max-width: 100%;
+            padding: 0 4.8625vw;
         }
     }
     &--medium{
@@ -85,7 +85,7 @@ body{
             padding-top: 105px;
         }
         @include for-md(){
-           padding-top: 0;
+           padding-top: 20px;
            justify-content: space-between;
            align-items: center;
         }
@@ -107,8 +107,8 @@ body{
             top:115.5px;
         }
         @include for-md(){
-            height: 18px;
-            width: 91px;
+            height: vw2(18);
+            width: vw2(91);
             top: auto;
             position: static;
         }
@@ -116,7 +116,7 @@ body{
             max-width: 100%;
             max-height: vw(18);
             @include for-md(){
-                max-height: 18px;
+                max-height: vw2(18);
             }
         }
         // @include for-xl(){}
@@ -135,6 +135,9 @@ body{
         span:not(.email__arrow){
             font-family: 'Arial';
         }
+        @include for-md(){
+            display: none;
+        }
     }
 }
 .email{
@@ -151,12 +154,12 @@ body{
     }
 }
 .hero{
-    padding-top: vw(75);
+    padding-top: vw(60);
     @include for-xl(){
         padding-top: 262px;
     }
     @include for-md(){
-        padding-top: 50px;
+        padding-top: vw2(110);
     }
     &__row{
         margin-top: vw(60);
@@ -185,7 +188,7 @@ body{
             margin: 0 70px;
         }
         @include for-md(){
-            margin: 0 20px;
+            margin: 0 vw(15);
         }
     }
     &__svg-container{
@@ -194,7 +197,7 @@ body{
             height: 172px;
         }
         @include for-md(){
-            height: 42px;
+            height: vw2(34);
         }
         flex-shrink: 0;
         svg{
@@ -207,7 +210,7 @@ body{
                 height: 4.93458vw;
             }
             @include for-md(){
-                height: 42px;
+                height: vw2(34);
             }
         }
     }
@@ -228,8 +231,8 @@ body{
             line-height: 102px;
         }
         @include for-md(){
-            font-size: 20px;
-            line-height: 34px;
+            font-size: vw2(16);
+            line-height: vw2(28);
         }
     }
 }
@@ -248,8 +251,8 @@ body{
         line-height: 5vw;
     }
     @include for-md(){
-        font-size: 30px;
-        line-height: 34px;
+        font-size: vw2(32);
+        line-height: vw2(40);
         br{
             display: none;
         }
@@ -264,7 +267,7 @@ body{
         margin-top: 140px;
     }
     @include for-md(){
-        margin-top: 40px;
+        margin-top: vw2(20);
     }
 }
 .subtitle + p{
@@ -276,7 +279,7 @@ body{
         margin-top: 70px;
     }
     @include for-md(){
-        margin-top: 20px;
+        margin-top: vw2(25);
     }
 }
 .subtitle{
@@ -288,8 +291,8 @@ body{
         line-height: 112px;
     }
     @include for-md(){
-        font-size: 20px;
-        line-height: 32px;
+        font-size: vw2(20);
+       line-height: vw2(32);
     }
 }
 p{
@@ -341,8 +344,9 @@ p+p{
         padding: 227px 0 210px;
     }
     @include for-md(){
-        margin-top: 40px;
-        padding: 30px 0;
+        // margin-top: 40px;
+        padding: vw2(70) 0 vw2(45);
+        margin-top: 0;
     }
     &__link{
         font-size: vw(40);
@@ -358,8 +362,8 @@ p+p{
             padding-bottom: 17.5px;
         }
         @include for-md(){
-            font-size: 20px;
-            line-height: 28px;
+            font-size: vw2(31);
+            line-height: vw2(42);
         }
         &:hover{
             color: rgb(238, 238, 238) !important;
@@ -384,8 +388,9 @@ p+p{
             margin-top: 175px;
         }
         @include for-md(){
-            font-size: 20px;
-            line-height: 23px;
+            font-size: vw2(20);
+            line-height: vw2(23);
+            margin-top: vw2(50);
         }
         
     }
@@ -404,7 +409,11 @@ p+p{
         margin-top: 455px;
 }
 @include for-md(){
-    margin-top: 50px;
+    margin-top: vw2(200);
+    .title{
+        font-size: vw2(40);
+        line-height: vw2(52);
+    }
 }
     img{
         position: absolute;
@@ -423,7 +432,7 @@ p+p{
             width: auto;
             height: auto;
             max-width: 100%;
-            margin-top: 30px
+            margin: vw2(30) auto;
         }
     }
 }
@@ -443,6 +452,10 @@ p+p{
 }
 @include for-md(){
     margin-top: 50px;
+    .title{
+        font-size: vw2(40);
+        line-height: vw2(52);
+    }
 }
     img{
         position: absolute;
@@ -461,7 +474,8 @@ p+p{
             width: auto;
             height: auto;
             max-width: 100%;
-            margin-top: 30px
+            margin: vw2(30) auto;
+            
         }
 
     }
@@ -478,6 +492,10 @@ p+p{
     }
     @include for-md(){
         margin-top: 50px;
+        .title{
+            font-size: vw2(40);
+            line-height: vw2(52);
+        }
     }
     &__line{
         margin-top: vw(75);
@@ -503,14 +521,15 @@ p+p{
             height: 3px;
             position: relative;
             top: 7px;
+            display: none;
         }
     }
     &__list-container{
-        @include for-md(){
-            position: relative;
-            overflow-x: auto;
-            overflow-y: visible;
-        }
+        // @include for-md(){
+        //     position: relative;
+        //     overflow-x: auto;
+        //     overflow-y: visible;
+        // }
     }
     &__list{
         display: flex;
@@ -520,8 +539,22 @@ p+p{
             margin-right: -22.2123vw;
         }
         @include for-md(){
-            margin-right: -20px;
-            width: 800px;
+            // margin-right: -20px;
+            // width: 800px;
+            margin-right: 0;
+            flex-direction: column;
+            position: relative;
+            margin-top: vw2(30);
+            padding-bottom: vw2(30);
+            &:before{
+                content: '';
+                position: absolute;
+               
+                height: 100%;
+                width: vw2(3);
+                background-color: $link-color;
+                left: vw2(6);
+            }
         }
         // @include for-xl(){
         //     margin-right: -700px;
@@ -543,8 +576,11 @@ p+p{
             padding-top: 126px;
         }
         @include for-md(){
-            padding-top: 36px;
-            padding-right: 20px;
+            padding-top: 0;
+            padding-right: 0;
+            width: 100%;
+            padding-left: vw2(35);
+            
         }
         &::before{
             content: '';
@@ -563,9 +599,11 @@ p+p{
                 width: 42px;
             }
             @include for-md(){
-                height: 12px;
-                width: 12px;
+                height: vw2(16);
+                width: vw2(16);
+               
                 top: 0;
+                left: 0;
             }
         }
        
