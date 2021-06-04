@@ -238,7 +238,7 @@ body{
 }
 .title{
     font-size: vw(40);
-
+    margin-top: 0;
     line-height: vw(52);
     font-weight: 600;
     
@@ -286,6 +286,7 @@ body{
     font-size: vw(20);
     line-height: vw(32);
     font-weight: 600;
+    margin: 0;
     @include for-xl(){
         font-size: 70px;
         line-height: 112px;
