@@ -410,7 +410,7 @@ p+p{
         margin-top: 455px;
 }
 @include for-md(){
-    margin-top: vw2(130);
+    margin-top: vw2(100);
     .title{
         font-size: vw2(40);
         line-height: vw2(52);
@@ -492,7 +492,7 @@ p+p{
             margin-top: 455px;
     }
     @include for-md(){
-        margin-top: vw2(130);
+        margin-top: vw2(100);
         .title{
             font-size: vw2(40);
             line-height: vw2(52);
