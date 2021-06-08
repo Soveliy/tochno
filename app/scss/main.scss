@@ -302,13 +302,13 @@ p{
 p + .subtitle{
     margin-top: vw(60);
     @include for-lg(){
-        margin-top: 5.06369vw;
+        margin-top: 1.72123vw;
     }
     @include for-xl(){
-        margin-top: 210px;
+        margin-top: 70px;
     }
     @include for-md(){
-        margin-top: 60px;
+        margin-top: vw2(25);
     }
 }
 .title + p{
