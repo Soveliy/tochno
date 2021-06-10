@@ -76,7 +76,7 @@ body{
     &__row{
         display: flex;
         justify-content: flex-end;
-        padding-top: vw(30);
+        padding-top: vw(70);
         @include for-lg(){
             padding-top: 2.78184vw;
 
@@ -128,6 +128,8 @@ body{
         color: $main-color;
         text-decoration: none;
         font-weight: 600;
+        position: fixed;
+        top: vw(30);
         &:hover{
             color: $link-color;
         }
@@ -136,14 +138,26 @@ body{
             font-family: 'Arial';
         }
         @include for-md(){
-            display: none;
+            // display: none;
+            // position: absolute;
+            // right: 0;
+            // top: vw2(30);
+            position: static;
         }
     }
 }
 .email{
+    font-size: vw(18);
+    line-height:1.1;
+    font-weight: 600;
+    @include for-md(){
+        font-size: vw2(18);
+    }
     &__arrow{
         color: $link-color;
         margin-right: vw(4);
+        padding-top: vw(4);
+       
         @include for-xl(){
             margin-right: 14px;
         }
@@ -151,6 +165,14 @@ body{
             margin-right: 4px;
         }
 
+    }
+}
+.email-container{
+    margin-top: vw(8);
+    margin-bottom: vw(57);
+    @include for-xl(){
+        margin-top: 24px;
+        margin-bottom: 100px;
     }
 }
 .hero{
@@ -242,13 +264,14 @@ body{
     line-height: vw(52);
     font-weight: 600;
     
-    @include for-xl(){
-        font-size: 140px;
-        line-height: 182px;
-    }
+   
     @include for-lg(){
         font-size: 3.87246vw;
         line-height: 5vw;
+    }
+    @include for-xl(){
+        font-size: 140px;
+        line-height: 182px;
     }
     @include for-md(){
         font-size: vw2(32);
@@ -298,6 +321,7 @@ body{
 }
 p{
     font-weight: 500;
+    margin-bottom: 0;
 }
 p + .subtitle{
     margin-top: vw(20);
@@ -350,12 +374,12 @@ p+p{
         margin-top: 0;
     }
     &__link{
-        font-size: vw(40);
-        line-height: vw(52);
+        font-size: vw(28);
+        line-height:1.1;
         text-decoration: none;
         color: $footer-color;
         font-weight: 600;
-        padding-bottom: vw(5);
+        padding-bottom: vw(2);
         
         @include for-xl(){
             font-size: 140px;
@@ -363,21 +387,41 @@ p+p{
             padding-bottom: 17.5px;
         }
         @include for-md(){
-            font-size: vw2(31);
-            line-height: vw2(42);
+            font-size: vw2(22);
+            line-height: vw2(30);
         }
         &:hover{
             color: rgb(238, 238, 238) !important;
-            background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%) 0px 100% / vw(1) vw(5) repeat-x;
+            background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%) 0px 100% / vw(1) vw(2) repeat-x;
         }
         span:not(.footer__link-arrow){
             font-family: 'Arial';
             font-weight: 500;
         }
     }
+    &__list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &-item + &-item{
+            margin-top: vw(15);
+            @include for-md(){
+                margin-top: vw2(15);
+            }
+        }
+    }
+    &__link-title{
+        font-size: vw(25);
+        line-height: vw(30);
+        margin-bottom: vw(5);
+        @include for-md(){
+            font-size: vw2(20);
+        }
+        
+    }
     &__copy{
-        font-size: vw(20);
-        line-height: vw(23);
+        font-size: vw(28);
+        line-height:1.1;
         font-weight: 500;
         margin-top: vw(50);
         @include for-lg(){
@@ -450,6 +494,9 @@ p+p{
     @include for-xl(){
         
         margin-top: 455px;
+        p{
+            line-height: 68px;
+        }
 }
 @include for-md(){
     margin-top: 50px;
@@ -567,14 +614,15 @@ p+p{
         box-sizing: border-box;
         width: 33.3%;
         padding-top: 2.65821vw;
+       
+        @include for-xl(){
+            padding-top: 126px;
+        }
         @include for-lg(){
             padding-right: 1vw;
             .subtitle+p{
                 line-height: 2.6vw;
             }
-        }
-        @include for-xl(){
-            padding-top: 126px;
         }
         @include for-md(){
             padding-top: 0;
@@ -614,5 +662,79 @@ p+p{
 p br{
     @include for-md(){
         display: none;
+    }
+}
+.media{
+    margin-top: vw(130);
+    position: relative;
+    overflow: hidden;
+    p{
+        font-size: vw(26);
+        line-height: vw(34);
+        @include for-xl(){
+            font-size: 48px;
+            line-height: 62px;
+        }
+    
+        @include for-md(){
+            font-size: vw2(16);
+            line-height: vw2(28);
+           
+        }
+
+    }
+   
+    @include for-lg(){
+        margin-top: 11.88799vw;
+    }
+    @include for-xl(){
+            margin-top: 455px;
+    }
+    @include for-md(){
+        margin-top: vw2(100);
+        .title{
+            font-size: vw2(40);
+            line-height: vw2(52);
+        }
+    }
+    .email{
+        color: $main-color;
+        text-decoration: none;
+        font-size: vw(28);
+        line-height: vw(36);
+        @include for-xl(){
+            font-size: 64px;
+            line-height: 1.1;
+        }
+        @include for-md(){
+            font-size: vw2(18);
+            line-height: vw2(24);
+        }
+        
+    }
+    .email__link-arrow{
+        color: $link-color;
+    
+    }
+    img{
+        position: absolute;
+        left: 70%;
+        // height: vw(450);
+        // width: vw(450);
+        border-radius: 50%;
+        top: vw(0);
+        @include for-xl(){
+            top: 0;
+            height: 1100px;
+            width: 1100px;
+            left: 80%;
+        }
+        @include for-md(){
+            position: static;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            margin: vw2(30) auto;
+        }
     }
 }
