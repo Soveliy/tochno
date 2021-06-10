@@ -63,13 +63,16 @@ body{
     }
 }
 .header{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     @include for-md(){
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        z-index: 7000;
+      
+        
         background-color: $footer-color;
         padding: 15px 0;
     }
@@ -360,6 +363,8 @@ p+p{
     }
 }
 .footer{
+    position: relative;
+    z-index: 60;
     margin-top: 10.20768vw;
     background-color: $link-color;
     color: $footer-color;
@@ -532,6 +537,8 @@ p+p{
     margin-top: vw(130);
     position: relative;
     overflow: hidden;
+    z-index: 60;
+    background: $footer-color;
     @include for-lg(){
         margin-top: 11.88799vw;
     }
