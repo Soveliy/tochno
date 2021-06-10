@@ -321,7 +321,7 @@ body{
 }
 p{
     font-weight: 500;
-    margin-bottom: 0;
+    // margin-bottom: 0;
 }
 p + .subtitle{
     margin-top: vw(20);
@@ -668,9 +668,16 @@ p br{
     margin-top: vw(130);
     position: relative;
     overflow: hidden;
+    .title{
+        margin-bottom: vw(60);
+        @include for-lg(){
+            margin-bottom: 70px;
+        }
+    }
     p{
-        font-size: vw(26);
-        line-height: vw(34);
+        font-size: vw(23);
+        line-height: vw(31);
+        margin-bottom: 0;
         @include for-xl(){
             font-size: 48px;
             line-height: 62px;
@@ -700,8 +707,8 @@ p br{
     .email{
         color: $main-color;
         text-decoration: none;
-        font-size: vw(28);
-        line-height: vw(36);
+        font-size: vw(25);
+        line-height: vw(33);
         @include for-xl(){
             font-size: 64px;
             line-height: 1.1;
