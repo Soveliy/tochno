@@ -1,3 +1,4 @@
+
 @import "vars";
 @import "libs";
 @import "fonts";
@@ -180,7 +181,7 @@ body{
     }
 }
 .hero{
-    padding-top: vw(130);
+    padding-top: vw(120);
     @include for-xl(){
         padding-top: 262px;
     }
@@ -369,7 +370,7 @@ p+p{
     margin-top: 10.20768vw;
     background-color: $link-color;
     color: $footer-color;
-    padding: vw(50) 0;
+    padding: vw(40) 0;
     @include for-xl(){
         margin-top: 430px;
         padding: 227px 0 210px;
@@ -410,17 +411,16 @@ p+p{
         list-style: none;
         padding: 0;
         margin: 0;
-        display: flex;
-        // padding: 0 20px;
-        box-sizing: border-box;
-        margin: 0 -20px;
-        &-item{
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
+        // display: flex;
+        // // padding: 0 20px;
+        // box-sizing: border-box;
+        // margin: 0 -20px;
+        // &-item{
+        //     padding: 0 20px;
+        // }
 
         &-item + &-item{
-            // margin-top: vw(15);
+            margin-top: vw(2);
             @include for-md(){
                 margin-top: vw2(15);
             }
@@ -432,7 +432,7 @@ p+p{
     &__link-title{
         // font-size: vw(25);
         // line-height: vw(30);
-        margin-bottom: vw(5);
+        margin-bottom: vw(0);
         @include for-md(){
             font-size: vw2(16);
         }
@@ -442,7 +442,7 @@ p+p{
         font-size: vw(28);
         line-height:1.1;
         font-weight: 500;
-        margin-top: vw(50);
+        margin-top: vw(40);
         @include for-lg(){
             margin-top: 5.10307vw;
         }
